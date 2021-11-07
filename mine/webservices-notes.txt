@@ -1,0 +1,87 @@
+--PART1: understanding web services
+	
+	--advantages: 
+		reusability, interopetability (language trasparancy), usability and deployability
+		
+	--considerations of web services:
+		latency: the time it takes to return a response
+		partial failures: when a server or network failed to respond
+		
+	--secure web services
+		authentication & authorization
+		basics auth & api key 
+		
+	--general idea about:
+	web services: the big boy
+	APIs : the light boy 
+	microservies: bunch of light boys
+	
+--PART2: REST
+		-def: a set of guidlines used to design APIs 
+		
+		-API principles:
+			resources (URI)
+			operations (GET, POST, PUT, DELETE)
+			formats (HTML, XML, Plain Text)
+			stateless communication
+		
+		-pros:
+			easier to create, lightweight
+			payload: data sent btw client & server 
+			promotes loose coupling
+			starts small and evolve over time 
+			variety of data formats  (XML, JSON...etc)
+			
+		-HATEOS (Hypermedia as the engine of application state)
+			restful apis should provide enough infos to the client to interact with the server 
+			soap: client & server interacts with a fixed contract 
+			HATEAOS simple terms: clients interacts with REST API entirely through the responses by the server 
+			
+		-tools: Swagger, Postman, OpenID, springfox swagger ui
+		
+		
+	--GraphQL
+		-def: query language for APIs, a syntax describing how to ask for data, which is usually used to load data 
+		-pros: flexible 
+		- componants
+			query document: read only (you can't create or manipulate data)
+			fields: defines what data that should be returned 
+			raw graphql queries
+			graphql type system: 
+			schema: set of types
+			queries: obtain infos about specific fields from objects 
+			resolvers: respo for getting the data 
+			types of operations: 
+				mutation (change data on the server side)
+				subscription (notifies for modified data)
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		

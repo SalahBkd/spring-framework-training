@@ -1,0 +1,50 @@
+--Definition:
+    project management tool
+    most popular use of maven is for build management and dependencies
+
+--Advantages:   
+    dependency management  
+        maven will find JAR files for you
+        no more missing JARs
+
+    building and running the app
+        no more build path / classpath issues
+
+    if a team uses maven you can join the project easily
+
+
+--Side notes
+    GAV (Group Artifact Version)
+
+    how to find dependencies ?
+        mvnrepo
+        search.maven 
+        offcial framework website...
+
+    what is a maven archetype ?
+        archetype is a Maven project templating toolkit. An archetype is defined as an original pattern or model from 
+    awhich all other things of the same kind are made
+
+
+    repositories
+        local
+        central
+        additional repos (teams) not maven based !
+        private repos (usecase: secured code module) local or cloud private repos
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+

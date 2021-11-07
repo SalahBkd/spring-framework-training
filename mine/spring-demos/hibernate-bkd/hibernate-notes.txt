@@ -1,0 +1,92 @@
+--intro
+    hibernate framework for persisting / saving java objects to a database
+    minimizes
+
+    maps a class/pojo to a DB table
+    hibernate uses JDBC for all db communications as a low level utility
+
+    dev env requirements: hibernate jar files & JDBC driver
+    we need a hibernate configuration file (session-factory configuration)
+    sessionFactory: heavy weight object once in app
+    session: wrapper of JDBC stuff
+    in sessionFactory its not required to pass hibernate.cfg.xml by default looks for it
+
+    ID Generation strategies
+        GenerationType.AUTO
+        GenerationType.IDENTITY // Auto-Increment
+        GenerationType.SEQUENCE
+        GenerationType.TABLE
+
+        or: custom generation strategy
+
+--advanced mapping
+    --one-to-one uni-diectional (instructor to instructor details)
+    --one-to-one bi-directional (instructor details to instructor)
+    --one-to-many bi-directional (many courses can be assigned to many instructors, many instructors can teach
+            multiple courses)
+            **if you delete the course don't delete the instructor, and vice-versa.
+    --one-to-many uni-directional (a course can have many reviews)
+        **if you delete the course also delete the reviews
+
+
+    --eager vs lazy loading
+        eager: load all the courses for the given student in one shot
+        lazy: load the courses for the student on demand
+
+        use-case: if we are searching a course by keyword we only want matched courses (lazy)
+        and not fetch the students of this courses (eager)
+
+        prefer lazy loading over eager loading to optimize the performance of the app.
+
+        real-world use-case: in master view load the student (lazy), in view details view
+        load courses (eager)
+
+        applied in hibernate with specifying the fetch type
+
+        we have default fetch types on relationships annotations like @OneToOne, @OneToMany...etc
+
+        N.B: when using LAZY hibernate session must be open or LazyInitializingException will be thrown
+        to complete the on demand request.
+
+        resolve lazy loading issues
+            call getter method (instructor.getCourses()) while session is open
+            HQL Join Fetch
+    --many-to-many
+        used with a mapping table (join table btw students & courses)
+        @JoinTable in both class (example: student & course)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

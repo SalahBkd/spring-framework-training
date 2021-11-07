@@ -1,0 +1,47 @@
+--Spring Boot
+    springBootApplication annotation
+    composed of:
+        @EnableAutoConfiguration
+        @ComponentScan
+        @Configuration
+
+    SpringApplication class: registers all beans in app context, starts the embedded tomcat server
+
+    spring boot starters:
+        a collection of maven dependencies
+
+    spring boot actuator:
+        Spring Boot Actuator provides secured endpoints for monitoring and managing your Spring Boot
+        application. By default, all actuator endpoints are secured. In this chapter, you will learn
+        in detail about how to enable Spring Boot actuator to your application.
+
+    running springboots apps from the command line
+        springboot apps are stand-alone apps
+        you can run them using the provided scripts or if you have maven installed or using java -jar
+
+
+    springboot app properties
+        custom configuration: server port, loggin levels, servlet context path, http session timout
+        base endpoint for the actuator, spring security, database URL...etc
+
+        access values from properties file with @Value
+
+    theymleaf
+        vs JSP: jsp used only in web environment, theymeleaf can be used in other environments
+        non-web use cases: email template,  csv template, pdf template
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

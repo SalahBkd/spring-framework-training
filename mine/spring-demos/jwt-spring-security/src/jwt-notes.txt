@@ -1,0 +1,25 @@
+DEV STEPS:
+    - Create UserDetailsService & SecurityConfigurer
+    - Authenticate an Endpoint
+    - Add JWT dependencies and create JWT util class
+    - Add RequestInput & ResponseOutput objects for the /authenticate endpoint
+    - handle /authenticate endpoint in the controller
+        . authenticate the request with Authentication manager
+        . generate JWT for the authenticated user
+        . return the Response with the user that is: Authenticated + has JWT token
+    - allow access to all in spring configurer
+    - allow spring security to listen to every request that has an authorization header that had a JWT token in it
+        . extract JWT from the header
+        . validate and set it in execution context
+        How ? with Servlet Filters
+
+    - tell spring configurer about the filter
+        . make session management STATELESS
+        . add the custom created filter before the default one
+
+
+
+
+
+
+

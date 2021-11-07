@@ -1,0 +1,96 @@
+why spring security ?
+    handles common vulnerabilities
+    widely adopted
+    app level authentication
+    microservices security  (JWT & Tokens)
+
+    5 main concepts: 
+        1- authentication: who you are ?
+        2- authorization: what do you want ?
+        3- principal: the thing that you authentified through the process of authentication (currently logged in user)
+        4- granted authority: authorization, view_thing, do_thing...etc
+        5- roles: if we have multiple authorities we can group them into one role.
+
+    uses servlet filters in the background, pre-process & post-process web requests
+    declarative vs programmatic security 
+    possession & knowledge based authentication
+
+    spring security has a default behaviour when you add it to your project 
+    all URLs are protected !
+
+    authentication manager: a way to configure authentication, you configure using the TODO builder pattern,
+    you work with authentication manager builder.
+    you extend the websecurityconfigureradapter and override configure method in it 
+
+    --How to configure authentication
+    configure () method provided by the authenicationmanager class
+    Two steps for this
+    1. Get hold of authenicationmanager builder class
+    2.set the configuration
+    @enablewebsecuirty
+    Extend websecuityconfigureadapter class and override configure() method
+    .setauthorizationtype()
+    . user ()
+    .password()
+
+    --How to configure authorization
+        configurable with HttpSecurity
+        Use /logout for log out
+        Similar to authenication by extending the websecurityconfigadapter having config(Http security)
+        http.authorizerequest().anymatcher("/user").hasanyrole("user")
+        . anymatcher ("/admin).hasanyrole("user","admin")
+        .anymatcher("/").permitall()
+        .and.formlogin();
+
+
+    how spring security works under the hood ?
+        filters
+        delegatin filter proxy, delegates requests to
+            authentication filters
+            authorization filters
+
+        input (credentials) output (principal), processed by authenticationProvider
+        TODO provider pattern
+
+        our app could have multiple AuthenticationProvider implementations (oAauth, LDAP, JWT...)
+        spring coordinates with those implementations using AuthenticationManager
+
+        TODO ProviderManager that implements authentication manager receives a request and it delegates it to other
+        TODO authentication providers it asks (calls supports() on them) hey do you implement my authentication
+        TODO mechanism (LDAP? JWT?), until it finds the corresponding authentication mechanism and it handle the request
+        TODO to it, the selected authentication mechanism checks the credentials against an identity store (DB), then
+        TODO it return a user details object that holds the infos about the principal and store it in the local thread
+        TODO then another filter handles storing the principal in a session.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+

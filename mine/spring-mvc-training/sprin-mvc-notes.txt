@@ -1,0 +1,17 @@
+--Spring data binding
+    with @RequestParam("name") & adding the attribute to the model
+    with spring mvc form tags (automatically sets & retrieve data from java bean)
+
+--Spring mvc form validation
+    you can apply built-in validation ruless or custom validation rules
+    bean validation (beanvalidation.org)
+    supported in spring 4+
+    validation annotations
+    initBinder pre-processer:
+        prevents submitting whitespace, you can trim whitespace in client side..
+        pre-process each web request to our controller
+
+
+
+
+

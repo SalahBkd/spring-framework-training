@@ -1,0 +1,68 @@
+why spring security ?
+    handles common vulnerabilities
+    widely adopted
+    app level authentication
+    microservices security  (JWT & Tokens)
+
+    5 main concepts: 
+        1- authentication: who you are ?
+        2- authorization: what do you want ?
+        3- principal: the thing that you authentified through the process of authentication (currently logged in user)
+        4- granted authority: authorization, view_thing, do_thing...etc
+        5- roles: if we have multiple authorities we can group them into one role.
+
+    uses servlet filters in the background, pre-process & post-process web requests
+    declarative vs programmatic security 
+    possession & knowledge based authentication
+
+    spring security has a default behaviour when you add it to your project 
+    all URLs are protected !
+
+    authentication manager: a way to configure authentication, you configure using the builder pattern, you work
+    with authentication manager builder.
+    you extend the websecurityconfigureradapter and override configure method in it 
+
+    How to configure authentication
+    configure () method provided by the authenicationmanager class
+    Two steps for this
+    1. Get hold of authenicationmanager builder class
+    2.set the configuration
+    @enablewebsecuirty
+    Extend websecuityconfigureadapter class and override configure() method
+    .setauthorizationtype()
+    . user ()
+    .password()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+        
+
+

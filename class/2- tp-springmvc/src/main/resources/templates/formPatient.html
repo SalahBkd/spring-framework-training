@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="header"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<div layout:fragment="pageContent">
+    <div class="container">
+        <h3>Form Patient</h3>
+        <form method="POST" th:action="@{savePatient}">
+            <div class="form-group">
+                <input type="hidden" name="id" class="form-control" th:value="${patient.id}">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Name: </label>
+                <input type="text" name="nom" class="form-control" th:value="${patient.nom}">
+                <span class="alert-danger" th:errors="${patient.nom}"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Date Naissance: </label>
+                <input type="date" name="dateNaisssance" class="form-control" th:value="${patient.dateNaisssance}">
+                <span class="alert-danger" th:errors="${patient.dateNaisssance}"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Score: </label>
+                <input type="number" name="score" class="form-control" th:value="${patient.score}">
+                <span class="alert-danger" th:errors="${patient.score}"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Malade: </label>
+                <input type="checkbox" name="malade" th:checked="${patient.malade}"/>
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+    </div>
+</div>
+
+</html>

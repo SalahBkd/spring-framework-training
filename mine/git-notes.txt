@@ -1,0 +1,116 @@
+PART1: CREATING SNAPSHOTS
+--what is git ?
+	control version system
+	main goals: track history & collaboration
+	distributed vs centralized systems
+	GIT is distributed
+	Pros: free, open source, fast, scalable, cheap branching/merging
+	
+--git workflow
+	if we delete a file we must stage it too
+	you can commit your code without staging
+	ignoring files 
+	git mv | gir cp 
+	
+--commiting best practices
+	commit often: don't mix commit changes (i.e: bug fix & typo)
+	wording: every commit must have a meaningful name "fixed a bug" "fix the bug"
+	
+--.gitignore
+	samples of files you need to ignore when working with java: https://github.com/github/gitignore/blob/master/Java.gitignore
+	
+	
+--viewing a commit & git objects 
+	commits
+	blobs (files)
+	trees (directories)
+	tags
+	
+--unstaging files 
+	you can restore files from the staging area 
+	GIT handles this with two approaches:
+	approach 1: takes the last copy from the last snapshot an puts it in the working directory incase it exists (modified)
+	approach2: git kayakhd the newled added file mn staging area w kaydiro fi the working directory bhala yalah zadnah (newely added)
+	
+--dsicarding local changes 
+	chi mrat we want to undo local changes 
+	example zadna chi file walakin mabghinahch yt tracka 
+	git clean -df newaddedfile.js
+	
+--restoring files to an earlier version 
+	chi mrat we want to restore chi files
+	par defaut nqadro rajeoh mn last snapshot wla last commit 
+	hna kanradoh mn chi commit (git restore --source="HEAD~1 filename")
+	
+--creating snapshots with vscode
+	we can work with git via vscode 
+	
+--creating snapshot with gitKraken
+	we can work with git graphically via vscode 
+	
+	
+--PART2: BROWSING HISTORY
+	search for commits 	
+	view a commit 
+	
+	restore your project to an earlier version 
+		when we are at DETACHED HEAD STATE we should only look up code and make an experimental changes 
+		
+	comapare commits 
+	view the history of a file
+	find a bad commit that introduced a bug 
+	
+	
+--PART3: branching
+	use branches 
+	compare branches 
+	merge branches 
+	resolve conflics
+	undo a faulty merge 
+	essential tools (stashing, cherry picking)
+	
+	
+--PART4: collaboration 
+	collaboration workflows
+	pushing, fetching and pulling
+	pull requests, issues and milestones
+	contributing to open source projects
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	

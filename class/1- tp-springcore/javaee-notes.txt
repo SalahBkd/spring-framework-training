@@ -1,0 +1,40 @@
+SESSIONS 1:
+	Projet informatique: 
+		--exigences fonctionnelle: métier
+		--exigences technique:  
+			performance:
+				temps de réponse
+				montée en charge: scalabilité verticale (+RAM & +CPU) & horizontal (microservices)
+				
+			maintenance:
+				Open Closed principle
+				
+			securité 
+			
+			persistance des données
+			
+			version: web & mobile & desktop 
+			
+		--exigences financière
+		
+	--Hard to develop the app that respects all this technique exigences
+	this is why we use a framework (experience of others)
+	
+	IOC Framework --IMPORTANT
+		Dev: partie métier 
+		Framework: partie technique 
+		E.G: @Transactional delegate the management of transactions to Spring IOC 
+		AOP: sépration code métier du code technique
+		IOC is derived from AOP
+		
+	
+	Loose Coupling (interface segregation principle) vs Tight Coupling (composition with a class)
+	
+	
+	med@youssfi.net
+		
+
+
+		
+		
+		
